@@ -9,3 +9,10 @@ function nextPage() {
   }
   pages[currentPage - 1].classList.add('active');
 }
+
+function resetPages() {
+  const pages = document.querySelectorAll('.page');
+  pages[currentPage - 1].classList.remove('active');
+  currentPage = 1;
+  pages[currentPage - 1].classList.add('active');
+}
