@@ -1,15 +1,23 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  width: 90%;
   padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -21,20 +29,30 @@ body {
   display: block;
 }
 
-h1, h2 {
+/* Header Styles */
+header h1, header h2 {
   color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
-p {
+/* Main Content Styles */
+main p {
   line-height: 1.6;
+  font-size: 1.1em;
+  color: #555;
 }
 
+/* Button Styles */
 button {
   background-color: #3498db;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
   margin-top: 20px;
 }
 
@@ -42,7 +60,12 @@ button:hover {
   background-color: #2980b9;
 }
 
+/* Footer Styles */
 footer {
   margin-top: 40px;
   font-size: 0.9em;
   color: #777;
+}
+
+footer strong {
+  color: #2c3e50;
