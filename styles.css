@@ -1,72 +1,144 @@
-/* General Styles */
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Tech-inspired blue gradient */
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
-  max-width: 800px;
-  width: 90%;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .page {
-  display: none;
+    display: none;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .page.active {
-  display: block;
+    display: block;
 }
 
-/* Header Styles */
-header h1, header h2 {
-  color: #2c3e50;
-  font-size: 2.5em;
-  margin-bottom: 20px;
+/* Fonts */
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Bold, modern headings */
+    color: #ffca28; /* Vibrant yellow-gold */
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-/* Main Content Styles */
-main p {
-  line-height: 1.6;
-  font-size: 1.1em;
-  color: #555;
+h2 {
+    font-family: 'Roboto', sans-serif; /* Clean, techy subheadings */
+    color: #0288d1; /* Bright blue */
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
-/* Button Styles */
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+h3 {
+    font-family: 'Open Sans', sans-serif; /* Simple, readable */
+    color: #555;
+    font-size: 1.4em;
+    margin-bottom: 10px;
 }
 
-button:hover {
-  background-color: #2980b9;
+p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #444;
 }
 
-/* Footer Styles */
-footer {
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #777;
+/* Image Styling */
+.image-container {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-footer strong {
-  color: #2c3e50;
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Page-specific styles */
+#page1 { border-top: 5px solid #ffca28; }
+#page2 { border-top: 5px solid #0288d1; }
+#page3 { border-top: 5px solid #4caf50; } /* Green for e-commerce */
+#page4 { border-top: 5px solid #f06292; } /* Pink for blog */
+#page5 { border-top: 5px solid #ffca28; }
+
+.footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    color: #0288d1;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.next-btn, .cta-btn {
+    font-family: 'Roboto', sans-serif;
+    padding: 12px 25px;
+    background-color: #ffca28; /* Yellow-gold buttons */
+    color: #1e3c72; /* Dark blue text */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.next-btn:hover, .cta-btn:hover {
+    background-color: #0288d1; /* Blue on hover */
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.cta-btn {
+    background-color: #4caf50; /* Green for final CTA */
+    position: static;
+    display: block;
+    margin: 20px auto 0;
+    width: 220px;
+}
+
+.cta-btn:hover {
+    background-color: #388e3c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container { padding: 10px; }
+    .page { padding: 20px; }
+    h1 { font-size: 2em; }
+    .next-btn, .cta-btn {
+        width: 100%;
+        position: static;
+        margin: 15px 0;
+    }
+    .image-container img { max-width: 100%; }
 }
