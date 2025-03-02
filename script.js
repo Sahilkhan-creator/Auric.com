@@ -1,18 +1,13 @@
+// script.js
 let currentPage = 1;
+const totalPages = 5;
 
 function nextPage() {
-  const pages = document.querySelectorAll('.page');
-  pages[currentPage - 1].classList.remove('active');
-  currentPage++;
-  if (currentPage > pages.length) {
-    currentPage = 1; // Loop back to the first page
-  }
-  pages[currentPage - 1].classList.add('active');
+    if (currentPage < totalPages) {
+        document.getElementById(`page${currentPage}`).classList.remove('active');
+        currentPage++;
+        document.getElementById(`page${currentPage}`).classList.add('active');
+    }
 }
 
-function resetPages() {
-  const pages = document.querySelectorAll('.page');
-  pages[currentPage - 1].classList.remove('active');
-  currentPage = 1;
-  pages[currentPage - 1].classList.add('active');
-}
+document.getElementById('page1').classList.add('active')
