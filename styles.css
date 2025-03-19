@@ -80,9 +80,9 @@ p {
 }
 
 /* Page-specific styles */
-#page1 { border-top: 5px solid #ffca28; }
-#page2 { border-top: 5px solid #0288d1; }
-#page3 { border-top: 5px solid #4caf50; } /* Green for e-commerce */
+#page1 { border-top: 5px solid black; }
+#page2 { border-top: 5px solid black; }
+#page3 { border-top: 5px solid black; } /* Green for e-commerce */
 #page4 { border-top: 5px solid #f06292; } /* Pink for blog */
 #page5 { border-top: 5px solid #ffca28; }
 
